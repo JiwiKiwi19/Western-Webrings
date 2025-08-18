@@ -5,6 +5,11 @@
         "description": "Local test site"
     },
     {
+        "name": "Local Test 2",
+        "url": "http://127.0.0.1:5500",
+        "description": "Local test site 2"
+    },
+    {
         "name": "GitHub Test",
         "url": "https://jacobl04.github.io/Western-Webrings",
         "description": "GitHub test site"
