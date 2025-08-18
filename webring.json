@@ -5,6 +5,11 @@
         "description": "Local test site"
     },
     {
+        "name": "GitHub Test",
+        "url": "https://jacobl04.github.io/Western-Webrings",
+        "description": "GitHub test site"
+    },
+    {
         "name": "Jacob Lee",
         "url": "https://jacoblee.codes",
         "graduating_year": "2027",

@@ -29,6 +29,8 @@
         const sites = await res.json();
 
         const index = sites.findIndex(site => stripTrailingSlash(site.url) === config.siteURL);
+        console.log(sites)
+
         if (index === -1) {
             container.innerHTML = `<div class="webring-widget-error">Site not found in webring.</div>`;
             return;
