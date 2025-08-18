@@ -14,7 +14,7 @@
         // Customizable Configurations for the Western Webring
         showRandom: container.dataset.showRandom === "true",
         color: container.dataset.color || "#000",
-        logo: container.dataset.logo || "assets/western.png",
+        logo: container.dataset.logo || "https://github.com/JacobL04/Western-Webrings/blob/main/assets/western.png",
         style: container.dataset.style || "default",
     }
 
