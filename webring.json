@@ -1,5 +1,10 @@
 [
     {
+        "name": "Local Test",
+        "url": "http://127.0.0.1:5500",
+        "description": "Local test site"
+    },
+    {
         "name": "Jacob Lee",
         "url": "https://jacoblee.codes",
         "graduating_year": "2027",
