@@ -8,7 +8,7 @@
     // constant object config for webring properties
     const config = {
         siteURL: stripTrailingSlash(window.location.origin), // compares domain url (path not included) with json url (for ordering)
-        jsonURL: "webring.json", // Main webrings URL
+        jsonURL: "https://jacobl04.github.io/Western-Webrings/webring.json", // Main webrings URL
         hubURL: "https://github.com/JacobL04/Western-Webrings",
         
         // Customizable Configurations for the Western Webring
@@ -17,6 +17,12 @@
         logo: container.dataset.logo || "assets/western.png",
         style: container.dataset.style || "default",
     }
+
+    // Debugging here
+
+    console.log(config.jsonURL)
+
+    // Debugging ends
 
     try {
         const res = await fetch(config.jsonURL);
@@ -41,7 +47,7 @@
         const widgetHTML = `
         <div class="webring-widget" style="color: ${config.color}">
             <a href="${prev.url}" class="webring-prev webring-arrows" title="Previous Site" >⇦</a>
-            <a href="${config.hubURL}" class="webring-logo" title="Webring Hub"><img src="${config.logo}" style="height:30px"></a>
+            <a href="${config.hubURL}" class="webring-logo" title="Western Webring Hub"><img src="${config.logo}" style="height:30px"></a>
             ${config.showRandom ? `<a href="${random.url}" class="webring-random" title="Random Site">?</a>` : ""}
             <a href="${next.url}" class="webring-next webring-arrows" title="Next Site">⇨</a>
         </div>
