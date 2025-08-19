@@ -22,8 +22,8 @@
             return raw.includes("/") ? raw : `https://jacobl04.github.io/Western-Webrings/assets/${raw}`;
         })(),
         stylePreset: container.dataset.style || "default",
-        arrowPrev: container.dataset.arrowPrev || "⇦",
-        arrowNext: container.dataset.arrowNext || "⇨"
+        arrowPrev: container.dataset.arrowPrev || "&lt; Prev",
+        arrowNext: container.dataset.arrowNext || "Next &gt;"
     }
     console.log(config.jsonURL) // Debug
 
