@@ -19,7 +19,7 @@
         color: container.dataset.color || "#000",
         logo: (() => {
             const raw = container.dataset.logo || "https://jacobl04.github.io/Western-Webrings/assets/western.png";
-            return raw.includes("/") ? raw : `assets/${raw}`;
+            return raw.includes("/") ? raw : `https://jacobl04.github.io/Western-Webrings/assets/${raw}`;
         })(),
         stylePreset: container.dataset.style || "default",
         arrowPrev: container.dataset.arrowPrev || "⇦",
