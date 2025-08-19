@@ -10,19 +10,22 @@
         siteURL: stripTrailingSlash(window.location.origin), // compares domain url (path not included) with json url (for ordering)
         jsonURL: "https://jacobl04.github.io/Western-Webrings/webring.json", // Main webrings URL
         hubURL: "https://github.com/JacobL04/Western-Webrings",
+        listURL: "https://jacobl04.github.io/Western-Webrings/index.html",
         
         // Customizable Configurations for the Western Webring
+        showList: container.dataset.showList === "true",
         showRandom: container.dataset.showRandom === "true",
+        randomText: container.dataset.randomText || "random",
         color: container.dataset.color || "#000",
-        logo: container.dataset.logo || "https://jacobl04.github.io/Western-Webrings/assets/western.png",
-        style: container.dataset.style || "default",
+        logo: (() => {
+            const raw = container.dataset.logo || "https://jacobl04.github.io/Western-Webrings/assets/western.png";
+            return raw.includes("/") ? raw : `assets/${raw}`;
+        })(),
+        stylePreset: container.dataset.style || "default",
+        arrowPrev: container.dataset.arrowPrev || "⇦",
+        arrowNext: container.dataset.arrowNext || "⇨"
     }
-
-    // Debugging here
-
-    console.log(config.jsonURL)
-
-    // Debugging ends
+    console.log(config.jsonURL) // Debug
 
     try {
         const res = await fetch(config.jsonURL);
@@ -47,13 +50,22 @@
 
         /* webring html */
         const widgetHTML = `
-        <div class="webring-widget" style="color: ${config.color}">
-            <a href="${prev.url}" class="webring-prev webring-arrows" title="Previous Site" >⇦</a>
-            <a href="${config.hubURL}" class="webring-logo" title="Western Webring Hub"><img src="${config.logo}" style="height:30px"></a>
-            ${config.showRandom ? `<a href="${random.url}" class="webring-random" title="Random Site">?</a>` : ""}
-            <a href="${next.url}" class="webring-next webring-arrows" title="Next Site">⇨</a>
+        <div class="webring-widget webring-style-${config.stylePreset}" style="color: ${config.color}">
+            <div class="webring-top-row">
+                <a href="${prev.url}" class="webring-prev webring-arrows" title="Previous Site">${config.arrowPrev}</a>
+                <a href="${config.hubURL}" title="Western Webring Hub">
+                    <img src="${config.logo}" class="webring-logo">
+                </a>
+                <a href="${next.url}" class="webring-next webring-arrows" title="Next Site">${config.arrowNext}</a>
+            </div>
+            ${(config.showRandom || config.showList) ? `
+            <div class="webring-bottom-row">
+                ${config.showList ? `<a href="${config.listURL}" class="webring-list" title="Webring List">[List]</a>` : ""}
+                ${config.showRandom ? `<a href="${random.url}" class="webring-random" title="Random Site">${config.randomText}</a>` : ""}
+            </div>` : ""}
         </div>
         `;
+        
 
         container.innerHTML = widgetHTML;
     } catch (error) {
