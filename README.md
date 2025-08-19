@@ -84,3 +84,4 @@ Got other questions? Send me a message on Discord: `neighbourjack`
 a. Instead of fetching JSON in the browser, a redirect system like: `https://webring.com/next?site=johndoe.com` would handle prev/next on the server side for faster performance.
 2. Adding more default preset styles
 3. Theming with custom CSS variables
+4. Create a front page where it lists all members

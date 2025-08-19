@@ -1,24 +1,9 @@
 [
     {
-        "name": "Local Test",
-        "url": "http://127.0.0.1:5501",
-        "description": "Local test site"
-    },
-    {
         "name": "Jacob Lee",
         "url": "https://jacoblee.codes",
         "graduating_year": "2027",
         "program": "Computer Science",
         "description": "A personal portfolio where I showcase my doohickeys and whatchamacodes"
-    },
-    {
-        "name": "Local Test 2",
-        "url": "http://127.0.0.1:5500",
-        "description": "Local test site 2"
-    },
-    {
-        "name": "GitHub Test",
-        "url": "https://jacobl04.github.io/Western-Webrings",
-        "description": "GitHub test site"
     }
 ]
