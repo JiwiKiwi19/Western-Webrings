@@ -12,13 +12,6 @@
         "description": "A personal portfolio where I showcase my doohickeys and whatchamacodes"
     },
     {
-        "name": "Maharshii Patel",
-        "url": "https://maharshiipatel.me",
-        "graduating_year": "2027",
-        "program": "Computer Science",
-        "description": "Portfolio websites showcasing bitty boops and logic loops"
-    },
-    {
         "name": "Local Test 2",
         "url": "http://127.0.0.1:5500",
         "description": "Local test site 2"
