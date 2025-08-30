@@ -18,7 +18,7 @@
         randomText: container.dataset.randomText || "random",
         color: container.dataset.color || "#000",
         logo: (() => {
-            const raw = container.dataset.logo || "https://jacobl04.github.io/Western-Webrings/assets/western.png";
+            const raw = container.dataset.logo || "https://jacobl04.github.io/Western-Webrings/assets/western_geese.png";
             return raw.includes("/") ? raw : `https://jacobl04.github.io/Western-Webrings/assets/${raw}`;
         })(),
         stylePreset: container.dataset.style || "default",

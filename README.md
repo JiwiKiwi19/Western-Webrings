@@ -1,4 +1,4 @@
-# Western-Webrings
+# Western Webrings Widget
 **Western Webrings** is a lightweight and customizable webring widget that connects students' (and alumni) websites from western university. Inspired by the charm of early internet, webrings help fosters a tighter sense of community by connecting peers through their individual websites which encourages curiosity, discovery and can create meaningful connection across the web.
 
 ## What is a webring?
@@ -85,3 +85,6 @@ a. Instead of fetching JSON in the browser, a redirect system like: `https://web
 2. Adding more default preset styles
 3. Theming with custom CSS variables
 4. Create a front page where it lists all members
+
+## Inspiration
+This repo was inspired by many resources: [History of Webrings](https://brisray.com/web/webring-history.htm), [Build a Modern Day Webring](https://css-tricks.com/how-you-might-build-a-modern-day-webring/), [uwatering](https://github.com/JusGu/uwatering), and of course the good old' 90's (pre search engine era).
