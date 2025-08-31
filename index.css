@@ -28,6 +28,11 @@ a {
 .webring_arrows:hover {
     text-decoration: underline;
 }
+.counter {
+    font-family: 'Tiempos', sans-serif;
+    color: black;
+    font-size: large;
+}
 
 /* Members Profile Websites */
 #profiles {

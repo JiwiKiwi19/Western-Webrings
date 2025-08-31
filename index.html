@@ -2,33 +2,76 @@
 <html>
 <head>
     <title>Western Webring Widget</title>
-    <!-- <link rel="stylesheet" href="https://jacobl04.github.io/Western-Webrings/webring.css"> -->
-    <!-- <link rel="stylesheet" href="webring.css"> -->
-    <link rel="stylesheet" href="https://jacobl04.github.io/Western-Webrings/index.css">
-    <!-- <link rel="stylesheet" href="index.css"> -->
+    <link rel="stylesheet" href="index.css">
     <link href="https://fonts.cdnfonts.com/css/bentonsans-regular" rel="stylesheet">
+    <link href="https://cdn.msar.me/fonts/Tiempos/font.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- PrismJS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1/themes/prism.css" rel="stylesheet" />
+
+    <!-- PrismJS Core -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-javascript.min.js"></script>
+    <!-- Copy to Clipboard Plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1/plugins/copy-to-clipboard/prism-copy-to-clipboard.css" rel="stylesheet" />
 </head>
 
-<!-- Testing webring widget -->
+<!-- Western Webring Widget Hub Page -->
 <body>
     <div class="column">
         <div class="info">
-            <h1 style="text-align: center; font-size: xxx-large;">
-                <a id="prev" class="webring_arrows">⬅</a>
-                Western Webring Widget
-                <a id="next" class="webring_arrows">➡</a>
-            </h1>
+            <div style="text-align: center;">
+                <h1 style="font-size: xxx-large;">
+                    <a id="prev" class="webring_arrows">⬅</a>
+                    Western Webring Widget
+                    <a id="next" class="webring_arrows">➡</a>
+                </h1>
+                <p id="counter" class="counter"></p>
+            </div>
             <hr>
-            <h1>Quick Description + Hub</h1>
-            <a href="https://github.com/JacobL04/Western-Webrings" target="_blank"><i class="fa fa-github" style="font-size:48px;"></i></a>
-            <p>Page under construction! Please come back later!</p>
-            <p>Add github logo, how to join, basic info, favicon icon</p>
-        </div>
+            <h1>How to Join</h1>
+            <p><strong>1.</strong> Head to the <a href="https://github.com/JacobL04/Western-Webrings" target="_blank">GitHub</a> page and Fork or clone the repository.</p>
+            <p><strong>2.</strong> Add your entry at the bottom of the <code>webring.json</code> in the following format:</p>
+            <p><strong>3.</strong> Open a pull request with your addition.</p>
+            <p><strong>4.</strong> Once accepted, embed the webring widget on your website using the provided code snippet.</p>
+            
+            <pre><code class="language-javascript">
+    {
+        "name": "Enter Your Name",
+        "url": "https://your_website.here",
+        "graduating_year": "20xx",
+        "program": "Your current enrolled program",
+        "description": "A short description of your website"
+    }
+            </code></pre>
+            
+            <h1>Embedding the Widget</h1>
+            <pre><code class="language-html">
+    &lt;link rel="stylesheet" href="https://jacobl04.github.io/Western-Webrings/webring.css">
 
+    &lt;div id="western-webring"
+        data-style="default"
+        data-color="blue"
+        data-show-list="true"
+        data-show-random="true"
+        data-random-text="[?]"
+        data-arrow-prev="&lt; Prev"
+        data-arrow-next="Next &gt;"
+        data-logo="western_purple.png"
+        >
+    &lt;/div>
+
+    &lt;script src="https://jacobl04.github.io/Western-Webrings/webring.js" async></script>
+            </code></pre>
+
+            <h1>Members</h1>
+        </div>
+        
         <!-- Members Websites -->
         <div id="profiles"></div>
-        <p id="counter"></p>
     </div>
 
     <footer>
@@ -58,7 +101,5 @@
 
     <!-- <script src="webring.js" async></script> -->
     <script src="index.js"></script>
-    <!-- <script src="https://jacobl04.github.io/Western-Webrings/webring.js" async></script> -->
-
 </body>
 </html>

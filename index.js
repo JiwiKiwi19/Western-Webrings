@@ -11,7 +11,7 @@ fetch("webring.json")
     next.href = data[0].url;
 
     console.log("total of " + data.length + " profiles found")
-    counter.textContent = data.length + " participants";
+    counter.textContent = "Now at " + data.length + " members";
 
     data.forEach(profile => {
         const div = document.createElement("div");
