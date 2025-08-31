@@ -1,22 +1,71 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    padding: 20px;
+    background-color: #4F2683;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 25px;
 }
 
-.container {
-    background-color: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.info {
+
 }
+
+a {
+    color: #201436;
+}
+
+.column {
+    background-color: white;
+    padding: 30px;
+}
+
+.webring_arrows {
+    text-decoration: none;
+    color: #4F2683;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.webring_arrows:hover {
+    text-decoration: underline;
+}
+
+/* Members Profile Websites */
+#profiles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Max 3 columns */
+    gap: 1.5rem;
+}
+
+.profile-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.profile-card h2 {
+    margin-top: 0;
+}
+
+.profile-card a {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.profile-card a:hover {
+    text-decoration: underline;
+}
+
 
 h1 {
-    color: #333;
+    font-family: 'BentonSans Regular', sans-serif;
+    color: #4F2683;
 }
 
-.description {
+/* .description {
     color: #666;
     font-size: 16px;
     margin-top: 10px;
@@ -31,4 +80,13 @@ a {
 
 a:hover {
     text-decoration: underline;
+} */
+
+footer {
+    font-family: 'BentonSans Regular', sans-serif;
+    text-align: center;
+    background-color: white;
+    color: #818284;
+    padding: 10px;
+    margin-top: 10px;
 }

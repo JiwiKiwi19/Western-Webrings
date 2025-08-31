@@ -9,7 +9,7 @@
     const config = {
         siteURL: stripTrailingSlash(window.location.origin), // compares domain url (path not included) with json url (for ordering)
         jsonURL: "https://jacobl04.github.io/Western-Webrings/webring.json?nocache=" + Date.now(), // Main webrings URL
-        hubURL: "https://github.com/JacobL04/Western-Webrings",
+        hubURL: "https://jacobl04.github.io/Western-Webrings",
         listURL: "https://jacobl04.github.io/Western-Webrings/index.html",
         
         // Customizable Configurations for the Western Webring

@@ -1,51 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Widget Testing</title>
-<!-- Must add Styling -->
-<!-- <link rel="stylesheet" href="https://jacobl04.github.io/Western-Webrings/webring.css"> -->
-<!-- <link rel="stylesheet" href="webring.css"> -->
-<link rel="stylesheet" href="index.css">
+    <title>Western Webring Widget</title>
+    <!-- <link rel="stylesheet" href="https://jacobl04.github.io/Western-Webrings/webring.css"> -->
+    <!-- <link rel="stylesheet" href="webring.css"> -->
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.cdnfonts.com/css/bentonsans-regular" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <!-- Testing webring widget -->
 <body>
-<div id="profiles">
-    <p>Page under construction! Please come back later!</p>
-    <h1>Quick Description + Hub</h1>
-    <p>Add github logo, how to join, basic info</p>
-</div>
+    <div class="column">
+        <div class="info">
+            <h1 style="text-align: center; font-size: xxx-large;">
+                <a id="prev" class="webring_arrows">⬅</a>
+                Western Webring Widget
+                <a id="next" class="webring_arrows">➡</a>
+            </h1>
+            <hr>
+            <h1>Quick Description + Hub</h1>
+            <a href="https://github.com/JacobL04/Western-Webrings" target="_blank"><i class="fa fa-github" style="font-size:48px;"></i></a>
+            <p>Page under construction! Please come back later!</p>
+            <p>Add github logo, how to join, basic info, favicon icon</p>
+        </div>
 
-<footer style="text-align: center;">
-    <p>A student led webring for Western University students, alumni and professors.</p>
-</footer>
-<!-- 
-style: default, minimal
-color: change color of arrows
-show-list: Toggle lists of other members
-show-random: Toggle random site button
-random-text: Modify random text
-arrow-prev: Modify previous arrow
-arrow-next: Modify next arrow
-logo: allows local or hotlinking
--->
-<div id="western-webring"
-    data-style="default"
-    data-color="blue"
-    data-show-list="true"
-    data-show-random="true"
-    data-random-text="[?]"
-    data-arrow-prev="&lt; Prev"
-    data-arrow-next="Next &gt;"
-    data-logo="western_purple.png"
-    >
-</div>
+        <!-- Members Websites -->
+        <div id="profiles"></div>
+        <p id="counter"></p>
+    </div>
 
-<!-- <script src="webring.js" async></script> -->
-<script src="index.js"></script>
-<!-- <script src="https://jacobl04.github.io/Western-Webrings/webring.js" async></script> -->
+    <footer>
+        <p>A student led webring for Western University students, alumni and professors.</p>
+    </footer>
+    <!-- 
+    style: default, minimal
+    color: change color of arrows
+    show-list: Toggle lists of other members
+    show-random: Toggle random site button
+    random-text: Modify random text
+    arrow-prev: Modify previous arrow
+    arrow-next: Modify next arrow
+    logo: allows local or hotlinking
+    -->
+    <div id="western-webring"
+        data-style="default"
+        data-color="blue"
+        data-show-list="true"
+        data-show-random="true"
+        data-random-text="[?]"
+        data-arrow-prev="&lt; Prev"
+        data-arrow-next="Next &gt;"
+        data-logo="western_purple.png"
+        >
+    </div>
 
+    <!-- <script src="webring.js" async></script> -->
+    <script src="index.js"></script>
+    <!-- <script src="https://jacobl04.github.io/Western-Webrings/webring.js" async></script> -->
 
 </body>
-
 </html>
