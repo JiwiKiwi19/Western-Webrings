@@ -29,15 +29,15 @@
                     Western Webring Widget
                     <a id="next" class="webring_arrows">➡</a>
                 </h1>
-                <p id="counter" class="counter"></p>
+                <div class="counter">
+                    <p>Now at <span id="counter">0</span> <a href="#members">Members</a></p>
+                </div>
             </div>
+
             <hr>
             <h1>How to Join</h1>
             <p><strong>1.</strong> Head to the <a href="https://github.com/JacobL04/Western-Webrings" target="_blank">GitHub</a> page and Fork or clone the repository.</p>
             <p><strong>2.</strong> Add your entry at the bottom of the <code>webring.json</code> in the following format:</p>
-            <p><strong>3.</strong> Open a pull request with your addition.</p>
-            <p><strong>4.</strong> Once accepted, embed the webring widget on your website using the provided code snippet.</p>
-            
             <pre><code class="language-javascript">
     {
         "name": "Enter Your Name",
@@ -47,7 +47,9 @@
         "description": "A short description of your website"
     }
             </code></pre>
-            
+            <p><strong>3.</strong> Open a pull request with your addition.</p>
+            <p><strong>4.</strong> Once accepted, embed the webring widget on your website using the provided code snippet.</p>
+
             <h1>Embedding the Widget</h1>
             <pre><code class="language-html">
     &lt;link rel="stylesheet" href="https://jacobl04.github.io/Western-Webrings/webring.css">
@@ -60,17 +62,16 @@
         data-random-text="[?]"
         data-arrow-prev="&lt; Prev"
         data-arrow-next="Next &gt;"
-        data-logo="western_purple.png"
+        data-logo="western_geese.png"
         >
     &lt;/div>
 
     &lt;script src="https://jacobl04.github.io/Western-Webrings/webring.js" async></script>
             </code></pre>
-
-            <h1>Members</h1>
         </div>
         
         <!-- Members Websites -->
+        <h1 id="members">Members</h1>
         <div id="profiles"></div>
     </div>
 

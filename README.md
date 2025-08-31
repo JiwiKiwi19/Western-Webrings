@@ -31,7 +31,7 @@ A **webring** is a collection of websites linked in a circular structure. Each s
     data-random-text="[?]"
     data-arrow-prev="&lt; Prev"
     data-arrow-next="Next &gt;"
-    data-logo="western_purple.png"
+    data-logo="western_geese.png"
     >
 </div>
 

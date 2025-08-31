@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #4F2683;
@@ -11,7 +15,11 @@ body {
 }
 
 a {
-    color: #201436;
+    text-decoration: underline;
+    color: #141436;
+}
+a:hover {
+    text-decoration: none;
 }
 
 .column {
@@ -55,37 +63,57 @@ a {
 
 .profile-card a {
     display: inline-block;
-    margin-top: 1rem;
     color: #007bff;
     text-decoration: none;
 }
-
 .profile-card a:hover {
     text-decoration: underline;
 }
-
 
 h1 {
     font-family: 'BentonSans Regular', sans-serif;
     color: #4F2683;
 }
+h2 {
+    font-family: 'BentonSans Regular', sans-serif;
+}
 
-/* .description {
+.meta {
+    font-family: 'BentonSans Regular', sans-serif;
+    color: #444;
+    margin-bottom: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.separator {
+    color: #bbb;
+}
+
+.program {
+    font-weight: bold;
+    color: #2c2c2c;
+}
+
+.grad-year {
+    font-style: italic;
     color: #666;
+}
+
+.description {
+    color: #818284;
     font-size: 16px;
-    margin-top: 10px;
 }
 
-a {
-    display: inline-block;
-    margin-top: 10px;
-    text-decoration: none;
-    color: #007BFF;
+/* Misc */
+code {
+    background-color: #eeeeee;
+    border-radius: 3px;
+    font-family: courier, monospace;
+    padding: 0 3px;
 }
-
-a:hover {
-    text-decoration: underline;
-} */
 
 footer {
     font-family: 'BentonSans Regular', sans-serif;

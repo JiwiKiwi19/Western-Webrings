@@ -11,7 +11,7 @@ fetch("webring.json")
     next.href = data[0].url;
 
     console.log("total of " + data.length + " profiles found")
-    counter.textContent = "Now at " + data.length + " members";
+    counter.textContent = data.length;
 
     data.forEach(profile => {
         const div = document.createElement("div");
@@ -19,11 +19,15 @@ fetch("webring.json")
 
         div.innerHTML = `
             <h2>${profile.name}</h2>
-            <p>${profile.program}</p>
-            <p>Graduating Year: <span>${profile.graduating_year}</span></p>
+            <div class="meta">
+                <span class="program">${profile.program}</span>
+                <span class="separator">|</span>
+                <span class="grad-year">Class of ${profile.graduating_year}</span>
+            </div>
             <p class="description">${profile.description}</p>
             <a href="${profile.url}" target="_blank">Visit my website</a>
         `;
+
 
         container.appendChild(div);
     });
