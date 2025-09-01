@@ -1,5 +1,5 @@
 # Western Webrings Widget
-**Western Webrings** is a lightweight and customizable webring widget that connects students' (and alumni) websites from western university. Inspired by the charm of early internet, webrings help fosters a tighter sense of community by connecting peers through their individual websites which encourages curiosity, discovery and can create meaningful connection across the web.
+**Western Webrings** is a lightweight and customizable webring widget (student led) that connects students, alumni and professors websites from western university. Inspired by the charm of early internet, webrings help fosters a tighter sense of community by connecting peers through their individual websites which encourages curiosity, discovery and can create meaningful connection across the web.
 
 ## What is a webring?
 A **webring** is a collection of websites linked in a circular structure. Each site has a *previous* and *next* buttons which links to other members of the ring encouraging exploration and connection across personal sites.
@@ -11,13 +11,39 @@ A **webring** is a collection of websites linked in a circular structure. Each s
 {
     "name": "Enter Your Name",
     "url": "https://your_website.here",
+    "urlText": "☆｡･ﾟ✧ Welcome to My Website ✧･｡☆",
     "graduating_year": "20xx",
     "program": "Your current enrolled program",
-    "description": "A short description of your website"
+    "description": "A short description of your website",
+    "background": "https://background_img.gif or #00b34d",
+    "nameColor": "white", 
+    "programColor": "white",
+    "gradYearColor": "white",
+    "descriptionColor": "#dedede",
+    "urlColor": "white",
+    "fontFamily": "monospace"
 }
 ```
 3. Open a pull request with your addition.
 4. Once accepted, embed the webring widget on your website using the provided code snippet.
+### webring.json format
+| Property            | Description                                                      |
+| ------------------- | ---------------------------------------------------------------- |
+| `"name"`            | Your name or alias. Example: `"John Doe"`.|
+| `"url"`             | URL to your website. Example: `"https://your_website.here"`.|
+| `"urlText"`         | Text to display for the website link. Example: `"Click Me!"`.|
+| `"graduating_year"` | Your graduating/graduated year. Example: `"2020"`.|
+| `"program"`         | The program you are enrolled in. Example: `"Health Science"`.|
+| `"description"`     | A short description of your website. Example: `"My personal blog.."`.|
+| `"background"`      | Background image URL or color. Example: `"https://background_img.gif"` or `"#00b34d"`.|
+| `"nameColor"`       | Text color for the name. Example: `"white"`.|
+| `"programColor"`    | Text color for the program. Example: `"white"`.|
+| `"gradYearColor"`   | Text color for the graduation year. Example: `"white"`.|
+| `"descriptionColor"`| Text color for the description. Example: `"#dedede"`.|
+| `"urlColor"`        | Text color for the URL. Example: `"white"`.|
+| `"fontFamily"`      | Font family used in the display. Example: `"monospace"`.|
+
+**Note**: To use the default style, simply leave the styling or coloring blank; `""`, and it will display with the default appearance.
 
 ## Embedding the Widget
 ```html
@@ -83,8 +109,8 @@ Got other questions? Send me a message on Discord: `neighbourjack`
 1. Server-side redirect links
 a. Instead of fetching JSON in the browser, a redirect system like: `https://webring.com/next?site=johndoe.com` would handle prev/next on the server side for faster performance.
 2. Adding more default preset styles
-3. Theming with custom CSS variables
-4. Create a front page where it lists all members
+3. ~~Theming with custom CSS variables~~
+4. ~~Create a front page where it lists all members~~
 
 ## Inspiration
-This repo was inspired by many resources: [History of Webrings](https://brisray.com/web/webring-history.htm), [Build a Modern Day Webring](https://css-tricks.com/how-you-might-build-a-modern-day-webring/), [uwatering](https://github.com/JusGu/uwatering), and of course the good old' 90's (pre search engine era).
+This repo was inspired by many resources: [History of Webrings](https://brisray.com/web/webring-history.htm), [Build a Modern Day Webring](https://css-tricks.com/how-you-might-build-a-modern-day-webring/), [Web Rings of Power](https://www.kersed.net/posts/webrings-of-power/), [uwatering](https://github.com/JusGu/uwatering), and of course the good old' 90's (pre search engine era).

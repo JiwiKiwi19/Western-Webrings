@@ -17,17 +17,31 @@ fetch("webring.json")
         const div = document.createElement("div");
         div.classList.add("profile-card");
 
-        div.innerHTML = `
-            <h2>${profile.name}</h2>
-            <div class="meta">
-                <span class="program">${profile.program}</span>
-                <span class="separator">|</span>
-                <span class="grad-year">Class of ${profile.graduating_year}</span>
-            </div>
-            <p class="description">${profile.description}</p>
-            <a href="${profile.url}" target="_blank">Visit my website</a>
-        `;
+        // Set background (either color or image)
+        if (profile.background.startsWith("http")) {
+            // It's an image URL
+            div.style.setProperty('--background-image', `url(${profile.background})`);
+        } 
+        else if (profile.background.startsWith("#")) {
+            div.style.backgroundColor = profile.background
+        }
+        else {
+            div.style.backgroundColor = "#f9f9f9";
+        }
 
+        // Apply custom text color if specified
+        div.style.color = profile.textColor || "#000";
+
+        div.innerHTML = `
+            <h2 style="font-family: ${profile.fontFamily || 'BentonSans Regular'}, sans-serif; color: ${profile.nameColor || 'black'};">${profile.name}</h2>
+            <div class="meta">
+                <span class="program" style="color: ${profile.programColor || 'black'};">${profile.program}</span>
+                <span class="separator">|</span>
+                <span class="grad-year" style="color: ${profile.gradYearColor || '#666'};">Class of ${profile.graduating_year}</span>
+            </div>
+            <p class="description" style="color: ${profile.descriptionColor || '#818284'};">${profile.description}</p>
+            <a href="${profile.url}" target="_blank" style="color: ${profile.urlColor || '#007bff'};">${profile.urlText || "Visit my website"}</a>
+        `;
 
         container.appendChild(div);
     });

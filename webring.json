@@ -2,8 +2,16 @@
     {
         "name": "Jacob Lee",
         "url": "https://jacoblee.codes",
+        "urlText":"◁ Visit my website ▷",
         "graduating_year": "2027",
         "program": "Computer Science",
-        "description": "A personal portfolio where I showcase my doohickeys and whatchamacodes"
+        "description": "A personal portfolio where I showcase my doohickeys and whatchamacodes",
+        "background": "https://64.media.tumblr.com/b92f5ea470b4f082258ee486fbfd21ab/tumblr_ptlbuufC7a1uxrf48o1_640.gif",
+        "nameColor": "white", 
+        "programColor": "white",
+        "gradYearColor": "white",
+        "descriptionColor": "#dedede",
+        "urlColor": "white",
+        "fontFamily": ""
     }
 ]

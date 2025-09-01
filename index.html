@@ -35,39 +35,127 @@
             </div>
 
             <hr>
-            <h1>How to Join</h1>
-            <p><strong>1.</strong> Head to the <a href="https://github.com/JacobL04/Western-Webrings" target="_blank">GitHub</a> page and Fork or clone the repository.</p>
-            <p><strong>2.</strong> Add your entry at the bottom of the <code>webring.json</code> in the following format:</p>
-            <pre><code class="language-javascript">
-    {
-        "name": "Enter Your Name",
-        "url": "https://your_website.here",
-        "graduating_year": "20xx",
-        "program": "Your current enrolled program",
-        "description": "A short description of your website"
-    }
-            </code></pre>
-            <p><strong>3.</strong> Open a pull request with your addition.</p>
-            <p><strong>4.</strong> Once accepted, embed the webring widget on your website using the provided code snippet.</p>
+            <br>
+            
+            <!-- How to Join Clickable Dropdown -->
+            <div class="dropdown">
+                <button class="dropdown-button" onclick="toggleDropdown('joinDropdown')">How to Join</button>
+                <div id="joinDropdown" class="dropdown-content">
+                    <p><strong>1.</strong> Head to the <a href="https://github.com/JacobL04/Western-Webrings" target="_blank">GitHub</a> page and Fork or clone the repository.</p>
+                    <p><strong>2.</strong> Add your entry at the bottom of the <code>webring.json</code> in the following format:</p>
+                    <pre><code class="language-javascript">
+{
+    "name": "Enter Your Name",
+    "url": "https://your_website.here",
+    "urlText": "☆｡･ﾟ✧ Welcome to My Website ✧･｡☆",
+    "graduating_year": "20xx",
+    "program": "Your current enrolled program",
+    "description": "A short description of your website",
+    "background": "https://background_img.gif or #00b34d",
+    "nameColor": "white", 
+    "programColor": "white",
+    "gradYearColor": "white",
+    "descriptionColor": "#dedede",
+    "urlColor": "white",
+    "fontFamily": "monospace"
+}
+                    </code></pre>
+                    <p><strong>3.</strong> Open a pull request with your addition.</p>
+                    <p><strong>4.</strong> Once accepted, embed the webring widget on your website using the provided code snippet.</p>
+                    
+                    <!-- webring.json format table -->
+                    <h3>webring.json format</h3>
+                    <table border="2" cellpadding="10" cellspacing="0" style="width: 100%; margin-top: 20px; border-collapse: collapse;">
+                        <thead>
+                            <tr>
+                                <th>Property</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>"name"</code></td>
+                                <td>Your name or alias. Example: <code>"John Doe"</code>.</td>
+                            </tr>
+                            <tr>
+                                <td><code>"url"</code></td>
+                                <td>URL to your website. Example: <code>"https://your_website.here"</code>.</td>
+                            </tr>
+                            <tr>
+                                <td><code>"urlText"</code></td>
+                                <td>Text to display for the website link. Example: <code>"Click Me!"</code>.</td>
+                            </tr>
+                            <tr>
+                                <td><code>"graduating_year"</code></td>
+                                <td>Your graduating/graduated year. Example: <code>"2020"</code>.</td>
+                            </tr>
+                            <tr>
+                                <td><code>"program"</code></td>
+                                <td>The program you are enrolled in. Example: <code>"Health Science"</code>.</td>
+                            </tr>
+                            <tr>
+                                <td><code>"description"</code></td>
+                                <td>A short description of your website. Example: <code>"My personal blog.."</code>.</td>
+                            </tr>
+                            <tr>
+                                <td><code>"background"</code></td>
+                                <td>Background image URL or color. Example: <code>"https://background_img.gif"</code> or <code>"#00b34d"</code>.</td>
+                            </tr>
+                            <tr>
+                                <td><code>"nameColor"</code></td>
+                                <td>Text color for the name. Example: <code>"white"</code>.</td>
+                            </tr>
+                            <tr>
+                                <td><code>"programColor"</code></td>
+                                <td>Text color for the program. Example: <code>"white"</code>.</td>
+                            </tr>
+                            <tr>
+                                <td><code>"gradYearColor"</code></td>
+                                <td>Text color for the graduation year. Example: <code>"white"</code>.</td>
+                            </tr>
+                            <tr>
+                                <td><code>"descriptionColor"</code></td>
+                                <td>Text color for the description. Example: <code>"#dedede"</code>.</td>
+                            </tr>
+                            <tr>
+                                <td><code>"urlColor"</code></td>
+                                <td>Text color for the URL. Example: <code>"white"</code>.</td>
+                            </tr>
+                            <tr>
+                                <td><code>"fontFamily"</code></td>
+                                <td>Font family used in the display. Example: <code>"monospace"</code>.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <p><strong>Note</strong>: To use the default style, simply leave the styling or coloring blank; <code>""</code>, and it will display with the default appearance.</p>
+                
+                </div>
+            </div>
 
-            <h1>Embedding the Widget</h1>
-            <pre><code class="language-html">
-    &lt;link rel="stylesheet" href="https://jacobl04.github.io/Western-Webrings/webring.css">
+            <!-- Embedding the Widget Clickable Dropdown -->
+            <div class="dropdown">
+                <button class="dropdown-button" onclick="toggleDropdown('embedDropdown')">Embedding the Widget</button>
+                <div id="embedDropdown" class="dropdown-content">
+                    <p>This is where you can add the instructions for embedding the widget into your website.</p>
+                    <pre><code class="language-html">
+&lt;link rel="stylesheet" href="https://jacobl04.github.io/Western-Webrings/webring.css"&gt;
 
-    &lt;div id="western-webring"
-        data-style="default"
-        data-color="blue"
-        data-show-list="true"
-        data-show-random="true"
-        data-random-text="[?]"
-        data-arrow-prev="&lt; Prev"
-        data-arrow-next="Next &gt;"
-        data-logo="western_geese.png"
-        >
-    &lt;/div>
+&lt;div id="western-webring"
+    data-style="default"
+    data-color="blue"
+    data-show-list="true"
+    data-show-random="true"
+    data-random-text="[?]"
+    data-arrow-prev="&lt; Prev"
+    data-arrow-next="Next &gt;"
+    data-logo="western_geese.png"&gt;
+&lt;/div&gt;
 
-    &lt;script src="https://jacobl04.github.io/Western-Webrings/webring.js" async></script>
-            </code></pre>
+&lt;script src="https://jacobl04.github.io/Western-Webrings/webring.js" async&gt;&lt;/script&gt;
+                    </code></pre>
+                </div>
+            </div>
         </div>
         
         <!-- Members Websites -->
@@ -77,6 +165,7 @@
 
     <footer>
         <p>A student led webring for Western University students, alumni and professors.</p>
+        <p>Found a bug? Contact me on discord! <code>neighbourjack</code></p>
     </footer>
     <!-- 
     style: default, minimal
@@ -102,5 +191,16 @@
 
     <!-- <script src="webring.js" async></script> -->
     <script src="index.js"></script>
+    <script>
+        // Function to toggle dropdown visibility
+        function toggleDropdown(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+    </script>
 </body>
 </html>

@@ -42,10 +42,11 @@ a:hover {
     font-size: large;
 }
 
+
 /* Members Profile Websites */
 #profiles {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Max 3 columns */
+    grid-template-columns: repeat(3, 1fr); /* Default to 3 columns */
     gap: 1.5rem;
 }
 
@@ -54,7 +55,35 @@ a:hover {
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    color: #000000;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.profile-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image: var(--background-image);
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px);
+}
+
+
+.profile-card h2,
+.profile-card .meta,
+.profile-card .description,
+.profile-card a {
+    position: relative;  /* Ensure these elements are above the overlay */
+    z-index: 1;
 }
 
 .profile-card h2 {
@@ -64,8 +93,10 @@ a:hover {
 .profile-card a {
     display: inline-block;
     color: #007bff;
+    font-weight: bold;
     text-decoration: none;
 }
+
 .profile-card a:hover {
     text-decoration: underline;
 }
@@ -73,9 +104,12 @@ a:hover {
 h1 {
     font-family: 'BentonSans Regular', sans-serif;
     color: #4F2683;
+    font-size: 2rem;
 }
+
 h2 {
     font-family: 'BentonSans Regular', sans-serif;
+    font-size: 1.5rem;
 }
 
 .meta {
@@ -104,10 +138,129 @@ h2 {
 
 .description {
     color: #818284;
-    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
+/* Responsive Design */
+@media (max-width: 1200px) {
+    #profiles {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+
+    .profile-card {
+        padding: 1rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #profiles {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    .meta {
+        font-size: 0.9rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-card {
+        padding: 0.75rem;
+    }
+
+    .description {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+}
+
+
+/* Customizable Preset Fonts */
+/* .font-option-1 {
+    font-family: 'Roboto', sans-serif;
+}
+
+.font-option-2 {
+    font-family: 'Georgia', serif;
+}
+
+.font-option-3 {
+    font-family: 'Comic Sans MS', cursive;
+}
+
+.font-option-4 {
+    font-family: 'Courier New', monospace;
+}
+
+.font-option-5 {
+    font-family: 'Arial', sans-serif;
+} */
+
+
 /* Misc */
+.dropdown {
+    margin-bottom: 1em;
+}
+
+.dropdown-button {
+    background-color: #4F2683;
+    color: white;
+    padding: 15px;
+    font-size: 1.2rem;
+    width: 100%;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-button:hover {
+    background-color: #8F55E0;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-content a {
+    color: #4F2683;
+}
+
+.dropdown-content a:hover {
+    text-decoration: underline;
+}
+
+pre {
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 14px;
+    overflow: auto;
+}
+
 code {
     background-color: #eeeeee;
     border-radius: 3px;
