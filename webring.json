@@ -13,5 +13,20 @@
         "descriptionColor": "#dedede",
         "urlColor": "white",
         "fontFamily": ""
-    }
+    },
+    {
+    "name": "Maharshii Patel",
+    "url": "https://www.maharshiipatel.me/",
+    "urlText": "Check this out!",
+    "graduating_year": "2027",
+    "program": "Computer Science",
+    "description": "The personal portfolio of an AI/ML Engineer",
+    "background": "https://res.cloudinary.com/pixel-papercraft/image/upload/c_limit,q_auto:best,w_1000/v1/users/j/jeff/2hamdoKZXee8qm3cgUhd8.jpg?_a=BAMABkeA0",
+    "nameColor": "white", 
+    "programColor": "white",
+    "gradYearColor": "white",
+    "descriptionColor": "#dedede",
+    "urlColor": "white",
+    "fontFamily": "monospace"
+}
 ]
