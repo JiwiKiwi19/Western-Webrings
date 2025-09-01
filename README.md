@@ -75,7 +75,6 @@ A **webring** is a collection of websites linked in a circular structure. Each s
 | `data-random-text` | Change text or symbol used for the random link (e.g. `?`, `[?]`, `random`). |
 | `data-arrow-prev`  | Change text for the "previous" button. |
 | `data-arrow-next`  | Change text for the "Next" button. |
-| `data-logo`        | Chnage logo image file or URL shown in the center of the widget. |
 
 ## FAQ
 
@@ -97,11 +96,6 @@ No. As long as your site supports HTML and JS, you can embed the widget.
 ### How are next/prev sites calculated?
 
 The webring reads from the `webring.json` file, checks if you are indexed in the JSON file, then finds your site’s index and then calculates your neighbors (previous index and next index). Like an array.
-
-
-### Can I use a custom logo?
-
-Yes! But try keeping it somewhat Western themed. Use the `data-logo` attribute to point to an image file (e.g. `data-logo="assets/mylogo.png"`).
 
 Got other questions? Send me a message on Discord: `neighbourjack`
 

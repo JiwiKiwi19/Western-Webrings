@@ -54,7 +54,7 @@
             <div class="webring-top-row">
                 <a href="${prev.url}" class="webring-prev webring-arrows" title="Previous Site">${config.arrowPrev}</a>
                 <a href="${config.hubURL}" title="Western Webring Hub">
-                    <img src="${config.logo}" class="webring-logo">
+                    <img src="assets/western_geese.png" class="webring-logo">
                 </a>
                 <a href="${next.url}" class="webring-next webring-arrows" title="Next Site">${config.arrowNext}</a>
             </div>
