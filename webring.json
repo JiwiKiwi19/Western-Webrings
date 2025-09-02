@@ -28,5 +28,20 @@
         "descriptionColor": "#dedede",
         "urlColor": "white",
         "fontFamily": "monospace"
+    },
+    {
+        "name": "Christopher Mao",
+        "url": "https://portfolio-for-webrings.vercel.app/",
+        "urlText": "Here it is ➔",
+        "graduating_year": "2028",
+        "program": "Computer Science",
+        "description": "Sneaky portfolio in the pocket",
+        "background": "#1500FF",
+        "nameColor": "white", 
+        "programColor": "white",
+        "gradYearColor": "white",
+        "descriptionColor": "#dedede",
+        "urlColor": "white",
+        "fontFamily": "monospace"
     }
 ]
