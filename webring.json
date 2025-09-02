@@ -15,33 +15,33 @@
         "fontFamily": ""
     },
     {
-    "name": "Maharshii Patel",
-    "url": "https://www.maharshiipatel.me/",
-    "urlText": "Check this out!",
-    "graduating_year": "2027",
-    "program": "Computer Science",
-    "description": "The personal portfolio of an AI/ML Engineer",
-    "background": "https://res.cloudinary.com/pixel-papercraft/image/upload/c_limit,q_auto:best,w_1000/v1/users/j/jeff/2hamdoKZXee8qm3cgUhd8.jpg?_a=BAMABkeA0",
-    "nameColor": "white", 
-    "programColor": "white",
-    "gradYearColor": "white",
-    "descriptionColor": "#dedede",
-    "urlColor": "white",
-    "fontFamily": "monospace"
-},
-{
-    "name": "Christopher Mao",
-    "url": "https://chrismao.netlify.app/",
-    "urlText": "Here it is ➔",
-    "graduating_year": "2028",
-    "program": "Computer Science",
-    "description": "Sneaky portfolio in the pocket",
-    "background": "#1500FF",
-    "nameColor": "#1500FF", 
-    "programColor": "#1500FF",
-    "gradYearColor": "#1500FF",
-    "descriptionColor": "##1500FF",
-    "urlColor": "#1500FF",
-    "fontFamily": "monospace"
-}
+        "name": "Maharshii Patel",
+        "url": "https://www.maharshiipatel.me/",
+        "urlText": "Check this out!",
+        "graduating_year": "2027",
+        "program": "Computer Science",
+        "description": "The personal portfolio of an AI/ML Engineer",
+        "background": "https://res.cloudinary.com/pixel-papercraft/image/upload/c_limit,q_auto:best,w_1000/v1/users/j/jeff/2hamdoKZXee8qm3cgUhd8.jpg?_a=BAMABkeA0",
+        "nameColor": "white", 
+        "programColor": "white",
+        "gradYearColor": "white",
+        "descriptionColor": "#dedede",
+        "urlColor": "white",
+        "fontFamily": "monospace"
+    },
+    {
+        "name": "Christopher Mao",
+        "url": "https://chrismao.netlify.app/",
+        "urlText": "Here it is ➔",
+        "graduating_year": "2028",
+        "program": "Computer Science",
+        "description": "Sneaky portfolio in the pocket",
+        "background": "#1500FF",
+        "nameColor": "#1500FF", 
+        "programColor": "#1500FF",
+        "gradYearColor": "#1500FF",
+        "descriptionColor": "##1500FF",
+        "urlColor": "#1500FF",
+        "fontFamily": "monospace"
+    }
 ]
