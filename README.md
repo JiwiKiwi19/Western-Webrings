@@ -129,7 +129,7 @@ This is normal! If you see `Site not found in webring.` then you've successfully
 
 ### Can I use this widget on a React or Next.js site?
 
-Yes, you can. Follow the [React (JSX) instructions](#React-(JSX)-Embedding) above to embed the widget.
+Yes, you can. Follow the [React (JSX) instructions](#react-jsx-embedding) above to embed the widget.
 
 ### Is there a way to fully customize the widget's design?
 
