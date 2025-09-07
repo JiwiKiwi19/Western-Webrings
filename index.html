@@ -14,6 +14,8 @@
     <!-- PrismJS Core -->
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1/prism.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-javascript.min.js"></script>
+    <!-- JSX syntax highlighting -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-jsx.min.js"></script>
     <!-- Copy to Clipboard Plugin -->
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/prismjs@1/plugins/copy-to-clipboard/prism-copy-to-clipboard.css" rel="stylesheet" />
@@ -41,8 +43,10 @@
             <div class="dropdown">
                 <button class="dropdown-button" onclick="toggleDropdown('joinDropdown')">How to Join</button>
                 <div id="joinDropdown" class="dropdown-content">
-                    <p><strong>1.</strong> Head to the <a href="https://github.com/JacobL04/Western-Webrings" target="_blank">GitHub</a> page and Fork or clone the repository.</p>
-                    <p><strong>2.</strong> Add your entry at the bottom of the <code>webring.json</code> in the following format:</p>
+                    <p><strong>1.</strong> Insert the webring widget into your website (See <a href="#how-to-embed" onclick="toggleDropdown('embedDropdown')">How to embed widget</a> below). The widget can be added to your webpage's footer, sidebar or wherever you prefer.</p>
+                    <p><strong>2.</strong> Before you get accepted you'll see the message <code>"Site not found in webring."</code> which is normal and indicates you've sucessfully embedded the widget</p>
+                    <p><strong>3.</strong> Head to the <a href="https://github.com/JacobL04/Western-Webrings" target="_blank">GitHub</a> page and Fork or clone the repository.</p>
+                    <p><strong>4.</strong> Add your entry at the bottom of the <code>webring.json</code> using these name valued pairs:</p>
                     <pre><code class="language-javascript">
 {
     "name": "Enter Your Name",
@@ -60,8 +64,8 @@
     "fontFamily": "monospace"
 }
                     </code></pre>
-                    <p><strong>3.</strong> Open a pull request with your addition.</p>
-                    <p><strong>4.</strong> Once accepted, embed the webring widget on your website using the provided code snippet.</p>
+                    <p><strong>5.</strong> Open a pull request with your addition.</p>
+                    <p><strong>6.</strong> Once accepted, the widget will update and you'll be officially part of the webring!</p>
                     
                     <!-- webring.json format table -->
                     <h3>webring.json format</h3>
@@ -128,19 +132,21 @@
                         </tbody>
                     </table>
                     
-                    <p><strong>Note</strong>: To use the default style, simply leave the styling or coloring blank; <code>""</code>, and it will display with the default appearance.</p>
+                    <p><strong>Note</strong>: You can leave entries blank by having the values be <code>""</code>. By default, all the color keys will have a default value if all of them have a blank entry. This will display the default profile card appearance.</p>
                 
                 </div>
             </div>
 
             <!-- Embedding the Widget Clickable Dropdown -->
-            <div class="dropdown">
-                <button class="dropdown-button" onclick="toggleDropdown('embedDropdown')">Don't forget to embed the widget</button>
+            <div class="dropdown" id="how-to-embed">
+                <button class="dropdown-button" onclick="toggleDropdown('embedDropdown')">How to embed widget</button>
                 <div id="embedDropdown" class="dropdown-content">
-                    <p>Once you made the pull request, make sure to add the following links and scripts somewhere in your website.</p>
+                    <p>You can quickly embed the webring widget into your website by adding the following components to your HTML file. The widget allows for basic customization, but full customization options are available.</p>
+                    <h3>HTML Embedding</h3>
                     <pre><code class="language-html">
 &lt;link rel="stylesheet" href="https://jacobl04.github.io/Western-Webrings/webring.css"&gt;
 
+&lt;!-- Default Style --&gt;
 &lt;div id="western-webring"
     data-style="default"
     data-color="blue"
@@ -154,7 +160,142 @@
 
 &lt;script src="https://jacobl04.github.io/Western-Webrings/webring.js" async&gt;&lt;/script&gt;
                     </code></pre>
-                    <p>Once embedded, it will say <code>Site not found in webring.</code> but that's ok! Once I merge your request the widget should update and you'll be officially connected to the webring!</p>
+
+                    <h3>React (JSX) Embedding</h3>
+                    <pre><code class="language-jsx">
+import React, { useEffect } from 'react';
+
+const WesternWebring = () => {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://jacobl04.github.io/Western-Webrings/webring.js';
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
+
+  return (
+    &lt;!-- Default Style --&gt;
+    &lt;div id="western-webring"
+        data-style="default"
+        data-color="blue"
+        data-show-list="true"
+        data-show-random="true"
+        data-random-text="[?]"
+        data-arrow-prev="&lt; Prev"
+        data-arrow-next="Next &gt;"
+    &gt;&lt;/div&gt;
+  );
+};
+
+export default WesternWebring;
+                    </code></pre>
+                    <p>To fully customize the widget to match your website's theme, I recommend downloading the <a href="https://github.com/JacobL04/Western-Webrings/blob/main/webring.css" target="_blank"><code>webring.css</code></a> file and integrating it directly into your website. You can change things like button styles, text colors, font families and more.</p>
+                </div>
+            </div>
+
+            <!-- Customize Profile Card -->
+            <div class="dropdown">
+                <button class="dropdown-button" onclick="toggleDropdown('customizeDropdown')">Customize Your Profile Card</button>
+                <div id="customizeDropdown" class="dropdown-content">
+                    <!--  -->
+                    <div>
+
+                    </div>
+
+                    <div>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" placeholder="Enter Your Name">
+                    </div>
+
+                    <div>
+                        <label for="url">Website URL:</label>
+                        <input type="text" id="url" placeholder="https://your_website.here">
+                    </div>
+
+                    <div>
+                        <label for="urlText">URL Title:</label>
+                        <input type="text" id="urlText" placeholder="☆｡･ﾟ✧ My Website ✧･｡☆">
+                    </div>
+
+                    <div>
+                        <label for="graduatingYear">Graduating Year:</label>
+                        <input type="text" id="graduatingYear" placeholder="202x">
+                    </div>
+
+                    <div>
+                        <label for="program">Program:</label>
+                        <input type="text" id="program" placeholder="Current enrolled program">
+                    </div> 
+
+                    <div>
+                        <label for="description">Description:</label>
+                        <textarea id="description" placeholder="Short description of your website"></textarea>
+                    </div>
+
+                    <div>
+                        <label for="background">Background (Color or Image URL):</label>
+                        <label><input type="radio" name="background-option" value="color" id="backgroundColorOption"> Color</label>
+                        <label><input type="radio" name="background-option" value="image" id="backgroundImageOption"> Image</label>
+                        
+                        <input type="color" id="backgroundColor" value="#f9f9f9" style="display: none;">
+                        <input type="text" id="backgroundImageUrl" placeholder="Enter Image URL" style="display: none;">
+                    </div>
+
+                    <div>
+                        <label for="fontFamily">Font Family:</label>
+                        <select id="fontFamily">
+                            <option value="monospace">Monospace</option>
+                            <option value="Arial">Arial</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="BentonSans">BentonSans</option>
+                        </select>
+                    </div>                   
+
+                    <!-- Color pickers for text and other elements -->
+                    <div>
+                        <label for="nameColor">Name Color:</label>
+                        <input type="color" id="nameColor" value="#000000">
+                    </div>
+
+                    <div>
+                        <label for="programColor">Program Color:</label>
+                        <input type="color" id="programColor" value="#000000">
+                    </div>
+
+                    <div>
+                        <label for="descriptionColor">Description Color:</label>
+                        <input type="color" id="descriptionColor" value="#818284">
+                    </div>
+
+                    <div>
+                        <label for="gradYearColor">Graduating Year Color:</label>
+                        <input type="color" id="gradYearColor" value="#666666">
+                    </div>
+
+                    <div>
+                        <label for="urlColor">URL Color:</label>
+                        <input type="color" id="urlColor" value="#007bff">
+                    </div>                    
+
+
+                    <!-- Preview Section -->
+                    <h2>Profile Card Preview</h2>
+                    <div id="profilePreview">
+                        <div id="profileCardPreview" class="profile-card">
+                            <h2 id="previewName">Enter Your Name</h2>
+                            <div class="meta">
+                                <span id="previewProgram">Program</span>
+                                <span class="separator">|</span>
+                                <span id="previewGradYear">Class of 202x</span>
+                            </div>
+                            <p id="previewDescription">Short description of your website</p>
+                            <a id="previewUrl" href="#">Visit my website</a>
+                        </div>
+                    </div>
+
+                    <button id="generateJSON">Generate JSON</button>
+                    <h2>JSON Format</h2>
+                    <pre id="jsonOutput"></pre>  
                 </div>
             </div>
         </div>
