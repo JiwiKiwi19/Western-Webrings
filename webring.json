@@ -54,7 +54,7 @@
         "background": "https://media1.tenor.com/m/3FTaZHP6q2wAAAAC/shohei-ohtani.gif",
         "nameColor": "#ff00ea",
         "programColor": "#00e1ff",
-        "gradYearColor": "#666666",
+        "gradYearColor": "white",
         "descriptionColor": "#12fd77",
         "urlColor": "#007bff",
         "fontFamily": "monospace"
